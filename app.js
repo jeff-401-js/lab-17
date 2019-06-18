@@ -6,9 +6,12 @@
  */
 
 const fs = require('fs');
-const event = require('./events/event.js');
-require('./events/logger.js');
-require('./events/error.js');
+
+const net = require('net');
+
+const client = new net.Socket();
+
+client.connect(3001, 'localhost', () => console.log('Socket in app.js created!'));
 
 /**
  * alterFile
