@@ -9,8 +9,8 @@ Jeff
 * [travis](https://www.travis-ci.com/jeff-401-js/lab-17)
 
 #### Documentation
-* [UML-Data-Flow]()
-* [JSDOCS](./docs/index.html) - drop index.html in chrome
+* [UML-Data-Flow](https://photos.app.goo.gl/7NKMB8LYbjqFwka3A)
+* [JSDOCS](./docs/index.html) - drop index.html in chrome - not required
 
 ### Setup
 eslint
