@@ -23,6 +23,9 @@ const alterFile = (file) => {
   readFile(file)
     .then(data => {
       writeFile(file, upper(data));
+    })
+    .catch(err => {
+      client.write(payload('error'));
     });
 };
 
@@ -36,11 +39,10 @@ function readFile(file){
   return new Promise((resolve, reject) => {
     fs.readFile(file, (err, data) => {
       if(err) { 
-        event.emit('error', 'readfile error', `${err}`);
+        reject(err);
+      }else{
+        resolve(data.toString());
       }
-      event.emit('log', 'readfile', `${file} read`);
-      resolve(data.toString());
-
     });
   });
 }
@@ -51,7 +53,6 @@ function readFile(file){
    * @desc uppercase function
    */
 function upper(data){
-  event.emit('log', 'uppercase', `${data} uppercased`);
   return data.toUpperCase();
 }
 
@@ -66,11 +67,21 @@ function writeFile(file, text){
   return new Promise((resolve, reject) => {
     fs.writeFile(file, Buffer.from(text), (err, data) => {
       if(err) { 
-        event.emit('error', 'writefile error', `${err}`); 
+        reject(err);
+      }else{
+        client.write(payload('saved'));
       }
-      event.emit('log', 'writefile', `${file} saved`);
     });
   });
+}
+
+function payload(event) {
+  let payload = {
+    name: event,
+    data: `A ${event} event just happened!`,
+  };
+
+  return JSON.stringify(payload);
 }
 
 let file = process.argv.slice(2).shift();
