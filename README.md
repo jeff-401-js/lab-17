@@ -10,7 +10,7 @@ Jeff
 
 #### Documentation
 * [UML-Data-Flow](https://photos.app.goo.gl/7NKMB8LYbjqFwka3A)
-* [JSDOCS](./docs/index.html) - drop index.html in chrome - not required
+* [JSDOCS] - not required this lab
 
 ### Setup
 eslint
@@ -21,6 +21,8 @@ jsdoc
 none
 
 #### Running the app
+* `nodemon server.js`
+* `nodemon logger.js`
 * `node app.js (filename)`
 
 #### Tests

@@ -87,4 +87,4 @@ function payload(event) {
 let file = process.argv.slice(2).shift();
 alterFile(file);
 
-module.exports = readFile, writeFile, upper;
+module.exports = {readFile, writeFile, upper, payload};

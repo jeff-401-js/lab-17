@@ -25,3 +25,5 @@ let dispatchEvent = (buffer) => {
     socketPool[socket].write(JSON.stringify(text));
   }
 };
+
+module.exports = dispatchEvent;
