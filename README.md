@@ -9,8 +9,17 @@ Jeff
 * [travis](https://www.travis-ci.com/jeff-401-js/lab-17)
 
 #### Documentation
-* [UML-Data-Flow]()
-* [JSDOCS](./docs/index.html) - drop index.html in chrome
+* [UML-Data-Flow](https://photos.app.goo.gl/7NKMB8LYbjqFwka3A)
+* [JSDOCS] - not required this lab
+
+## Modules
+app.js
+  utilsApp.js
+logger.js
+  utilsLogger.js
+server.js
+app.test.js
+fs.js
 
 ### Setup
 eslint
@@ -21,6 +30,8 @@ jsdoc
 none
 
 #### Running the app
+* `nodemon server.js`
+* `nodemon logger.js`
 * `node app.js (filename)`
 
 #### Tests
