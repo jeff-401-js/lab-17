@@ -2,7 +2,7 @@
 
 const app = require('../app.js');
 // console.log(app);
-const server = require('../server.js');
+// const server = require('../server.js');
 
 describe('uppercase', () => {
   it('should return a string uppercased', () => {
