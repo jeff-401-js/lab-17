@@ -29,14 +29,14 @@ const alterFile = (file) => {
         name: 'saved',
         data: `SAVED: event just happened!`,
       };
-      client.write('file-save', JSON.stringify(payload));
+      client.write(JSON.stringify(payload));
     })
     .catch(err => {
       let payload = {
         name: 'error',
         data: `ERROR: event just happened!`,
       };
-      client.write('file-error', JSON.stringify(payload));
+      client.write(JSON.stringify(payload));
     });
 };
 
