@@ -10,7 +10,16 @@ Jeff
 
 #### Documentation
 * [UML-Data-Flow](https://photos.app.goo.gl/7NKMB8LYbjqFwka3A)
-* [JSDOCS](./docs/index.html) - drop index.html in chrome - not required this lab
+* [JSDOCS] - not required this lab
+
+## Modules
+app.js
+  utilsApp.js
+logger.js
+  utilsLogger.js
+server.js
+app.test.js
+fs.js
 
 ### Setup
 eslint
